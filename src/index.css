@@ -1,13 +1,135 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  margin: 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.Lead {
+  padding: 2px;
+  background-color: whitesmoke;
+  border: 1px solid wheat;
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 375px; /* Should be removed. Only for demonstration */
+  box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  box-sizing: border-box;
+}
+.col {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 60px; /* Should be removed. Only for demonstration */
+  box-sizing: border-box;
+}
+.rw:after {
+  content: "";
+  display: table;
+  clear: both;
+  box-sizing: border-box;
+}
+input {
+  float: left;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  width: 70%;
+  padding: 12px 12px;
+  font-family: "Poppins", sans-serif;
+  float: left;
+}
+input:hover {
+  background-color: #fffaf3;
+}
+
+input:focus {
+  outline: 1px solid #ccc;
+  border: 1px solid #ccc;
+}
+
+button {
+  height: 40px;
+  min-width: 50px;
+  border-radius: 0.25rem;
+  float: right;
+  font-size: 1rem;
+  color: black;
+  background-color: skyblue;
+  cursor: pointer;
+  border: none;
+}
+
+.Nav {
+  width: 100%;
+  background-color: rgb(95, 93, 89);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.Nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.Nav li {
+  padding: 1rem;
+}
+.Nav li a {
+  text-decoration: none;
+  color: white;
+}
+.Leads {
+  width: 100%;
+  height: 79vh;
+  display: flex;
+  /* justify-content: center; horizontal alignment */
+  /* align-items: center; verticl alignment */
+  margin-left: 10px;
+  margin-top: 10px;
+}
+table {
+  width: 800px;
+  height: 200px;
+}
+.Leads table {
+  border: 1px solid rgb(63, 59, 59);
+  border-collapse: collapse;
+  padding: 10px;
+}
+.Leads th {
+  border: 1px solid rgb(63, 59, 59);
+  border-collapse: collapse;
+  padding: 10px;
+}
+.Leads td {
+  border: 1px solid rgb(63, 59, 59);
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+td {
+  text-align: center;
 }

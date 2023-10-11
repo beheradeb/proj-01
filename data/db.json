@@ -1,0 +1,52 @@
+{
+  "lead": {
+    "id": "1",
+    "firstName": "Rahul",
+    "lastName": "Nayak",
+    "phone": 9876543210,
+    "email": "rahul97@gmail.com",
+    "location": "Bangalore",
+    "age": "457",
+    "gender": "male",
+    "weight": "75",
+    "intend": "blood pressure"
+  },
+  "leads": [
+    {
+      "id": "1",
+      "firstName": "Rahul",
+      "lastName": "Nayak",
+      "phone": 9876543210,
+      "email": "rahul97@gmail.com",
+      "location": "Bangalore",
+      "age": "45",
+      "gender": "male",
+      "weight": "750",
+      "intend": "blood pressure"
+    },
+    {
+      "id": "2",
+      "firstName": "Rajesh",
+      "lastName": "Yadav",
+      "phone": "9893456276",
+      "email": "rajesh276@gmail.com",
+      "location": "Pune",
+      "age": "39",
+      "gender": "male",
+      "weight": "70",
+      "intend": "bp"
+    },
+    {
+      "id": "3",
+      "firstName": "Shreya",
+      "lastName": "Singh",
+      "phone": "9846744375",
+      "email": "shreya375@gmail.com",
+      "location": "Noida",
+      "age": "50",
+      "gender": "female",
+      "weight": "80",
+      "intend": "blood pressure"
+    }
+  ]
+}
