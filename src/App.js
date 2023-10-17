@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Leads from "./components/Leads";
 import Lead from "./components/Lead";
+import Development from "./components/Development";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<Leads />} />
           <Route path="/leads/:leadId" element={<Lead />} />
         </Route>
+        <Route path="/dev" element={<Development />} />
       </Route>
     </Routes>
   );
