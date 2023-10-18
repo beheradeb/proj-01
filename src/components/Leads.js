@@ -56,7 +56,7 @@ const Leads = () => {
         <thead>
           <tr>
             <th style={{ borderLeft: "none", borderRight: "none" }}></th>
-            <th style={{ borderLeft: "none" }}>
+            <th style={{ borderLeft: "none", paddingLeft: "14px" }}>
               <input type="checkbox" />
             </th>
             <th>Id</th>
