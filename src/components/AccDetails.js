@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "../api/axios";
 import EditPen from "../image/edit-pen.png";
 
-const Details = () => {
+const AccDetails = () => {
   const [obj, setObj] = useState({});
   const [id, setId] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -113,4 +113,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default AccDetails;

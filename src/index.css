@@ -4,8 +4,6 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-html {
-}
 
 /* DEvelopmeNt starT*/
 /* ================================================================== */
@@ -15,6 +13,7 @@ html {
   width: 52.4rem;
   height: 27em;
   margin: 10px;
+  margin-top: 3rem;
   margin-left: 219px;
   background: white;
   border-radius: 5px;
@@ -149,6 +148,10 @@ html {
   margin-top: 20px;
 }
 .Nav li :hover {
+  border-top: 3.5px solid rgb(36, 110, 174);
+  padding: 1rem;
+}
+.Nav li :active {
   border-top: 3.5px solid rgb(36, 110, 174);
   padding: 1rem;
 }
@@ -380,6 +383,14 @@ p {
   margin-left: 1px;
   margin-top: 1px;
 }
+.DesAccountLogo {
+  background: orangered;
+  border-radius: 4px;
+  height: 33px;
+  width: 33px;
+  margin-left: 1px;
+  margin-top: 1px;
+}
 .font {
   margin: 0;
   font-size: 0.8em;
@@ -421,6 +432,7 @@ button {
   position: absolute;
   top: 35px;
   right: inherit;
+  z-index: 1;
 }
 .items {
   border: 1.39px solid rgb(158, 156, 156);
@@ -470,3 +482,65 @@ button {
   margin-left: 320px;
   cursor: pointer;
 }
+/* Modal css Start*/
+
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+.overlay {
+  /* background: rgba(49, 49, 49, 0.8); */
+  background: rgba(0, 0, 0, 0.3);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
+
+.cross-btn {
+  position: absolute;
+  top: 9px;
+  right: 215px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+
+  /* padding: 5px 7px; */
+}
+
+/* Modal css End*/

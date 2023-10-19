@@ -3,9 +3,9 @@ import axios from "../api/axios";
 import { Link } from "react-router-dom";
 import Logo from "../image/lead_120.png";
 import Play from "../image/Down-Carrot-512.webp";
-import Development from "./Development";
+import AccountNew from "./AccountNew";
 
-const Leads = () => {
+const Accounts = () => {
   const [leads, setLeads] = useState([]);
   const [open, setOpen] = useState(false);
   const options = ["New Note", "Delete", "Check for New Data"];
@@ -23,7 +23,7 @@ const Leads = () => {
   useEffect(() => {
     const fetchLeads = async () => {
       try {
-        const response = await axios.get("/leads");
+        const response = await axios.get("/accounts");
         const leads = await response.data;
         setLeads(leads);
       } catch (err) {
@@ -35,9 +35,9 @@ const Leads = () => {
   return (
     <div className="Leads">
       <div className="first">
-        <img src={Logo} alt="img not aviable" className="DesLeadLogo" />
+        <img src={Logo} alt="img not aviable" className="DesAccountLogo" />
         <div className="marginFont">
-          <p className="font">Leads</p>
+          <p className="font">Accounts</p>
           <h1 className="fonth1">Ms Shelly Brownell</h1>
         </div>
         <div className="btn">
@@ -96,7 +96,7 @@ const Leads = () => {
               </td>
               <td>{lead.id}</td>
               <td>
-                <Link to={`/leads/${lead.id}`}>{lead.firstName}</Link>
+                <Link to={`/accounts/${lead.id}`}>{lead.firstName}</Link>
               </td>
               <td>{lead.lastName}</td>
               <td>{lead.email}</td>
@@ -113,7 +113,7 @@ const Leads = () => {
             <button className="cross-btn" onClick={toggleOpenModal}>
               <strong>&#9587;</strong>
             </button>
-            <Development toggleOpenModal={toggleOpenModal} />
+            <AccountNew toggleOpenModal={toggleOpenModal} />
           </div>
         </div>
       )}
@@ -121,4 +121,4 @@ const Leads = () => {
   );
 };
 
-export default Leads;
+export default Accounts;

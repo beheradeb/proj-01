@@ -1,16 +1,4 @@
 {
-  "lead": {
-    "id": "4",
-    "firstName": "Rahul",
-    "lastName": "Nayak",
-    "phone": 9876543210,
-    "email": "rahul97@gmail.com",
-    "location": "Bangalore",
-    "age": "47",
-    "gender": "male",
-    "weight": "75",
-    "intend": "blood pressure"
-  },
   "leads": [
     {
       "id": "3",
@@ -20,9 +8,8 @@
       "email": "rahul97@gmail.com",
       "location": "Bangalore",
       "age": "4",
-      "gender": "male",
-      "weight": "750",
-      "intend": "blood pressure"
+      "zip": "808049",
+      "description": "This is description"
     },
     {
       "id": "2",
@@ -32,9 +19,8 @@
       "email": "rajesh276@gmail.com",
       "location": "Pune",
       "age": "39",
-      "gender": "male",
-      "weight": "200",
-      "intend": "daibetes"
+      "zip": "768441",
+      "description": "This is description"
     },
     {
       "id": "1",
@@ -44,117 +30,21 @@
       "email": "shreya375@gmail.com",
       "location": "Noida",
       "age": "50",
-      "gender": "female",
-      "weight": "80",
-      "intend": "blood pressure"
-    },
+      "zip": "908049",
+      "description": "This is description"
+    }
+  ],
+  "accounts": [
     {
-      "id": "4",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
-    },
-    {
-      "id": "5",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
-    },
-    {
-      "id": "6",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
-    },
-    {
-      "id": "7",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
-    },
-    {
-      "id": "8",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
-    },
-    {
-      "id": "9",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
-    },
-    {
-      "id": "10",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
-    },
-    {
-      "id": "11",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
-    },
-    {
-      "id": "12",
-      "firstName": "Rahul",
-      "lastName": "Nayak",
-      "phone": 9876543210,
-      "email": "rahul97@gmail.com",
-      "location": "Bangalore",
-      "age": "47",
-      "gender": "male",
-      "weight": "75",
-      "intend": "blood pressure"
+      "id": "1",
+      "firstName": "Shreya",
+      "lastName": "Singh",
+      "phone": "9846744375",
+      "email": "shreya375@gmail.com",
+      "location": "Noida",
+      "age": "50",
+      "zip": "908049",
+      "description": "This is description"
     }
   ]
 }

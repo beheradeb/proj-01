@@ -26,6 +26,9 @@ const Nav = () => {
           <Link to="/leads">Leads</Link>
         </li>
         <li>
+          <Link to="/accounts">Accounts</Link>
+        </li>
+        <li>
           <Link to="/dev">Dev Area</Link>
         </li>
         {/* <li>
