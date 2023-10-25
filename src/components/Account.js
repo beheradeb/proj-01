@@ -1,10 +1,10 @@
 import AccDesc from "./AccDesc";
-import Tabs from "./Tabs";
+import AccTabs from "./AccTabs";
 const Account = () => {
   return (
     <div className="Lead">
       <AccDesc />
-      <Tabs />
+      <AccTabs />
     </div>
   );
 };

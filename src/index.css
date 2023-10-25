@@ -7,107 +7,20 @@
 
 /* DEvelopmeNt starT*/
 /* ================================================================== */
-
 .Development {
-  /* border: 2px solid red; */
-  width: 52.4rem;
-  height: 27em;
-  margin: 10px;
-  margin-top: 3rem;
-  margin-left: 219px;
-  background: white;
-  border-radius: 5px;
-  border-top-right-radius: 5px;
-  overflow-y: scroll;
-  position: relative;
-}
-.Development::-webkit-scrollbar {
-  width: 1.1rem;
-}
-.Development::-webkit-scrollbar-track {
-  background: rgb(241 241 241);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  margin-block: 0.7em;
-}
-.Development::-webkit-scrollbar-thumb {
-  height: 1px;
-  background: rgb(193 193 193);
-  border: 2px solid rgb(241 241 241);
-}
-.Inside {
-  margin: 0;
-  /* border: 2px dotted blue; */
-}
-.Head {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.thickLine {
-  height: 0.14rem;
-  background: rgb(193 193 193);
-}
-.ReqInfo {
-  text-align: right;
-  font-size: 0.8em;
-  color: rgb(62, 60, 60);
-  margin: 1rem 1rem 0.5rem;
-}
-.star {
-  color: rgb(186 5 23);
-}
-.ColorBar {
-  background: rgb(243 243 243);
-  padding: 0.5rem 1rem;
-  border-radius: 0.3em;
-  margin: 0.1rem 0.5rem;
-}
-.descMargin {
-  margin-left: 2rem;
-  margin-top: 1rem;
-}
-.TextArea {
-  width: 46rem;
-  height: 4rem;
-  /* margin: 0rem 2rem 2rem 10rem; */
-  margin-top: 0rem;
-  margin-left: 2rem;
-  margin-bottom: 1.3rem;
-}
-.InputSize {
-  width: 20rem;
-  height: 1.9rem;
-  margin-left: 2rem;
-  border-radius: 5px;
-  border-width: thin;
-  padding: 0.7rem;
-}
-.ButtonBar {
-  background: rgb(238 237 236);
-  opacity: 0.9;
-  padding: 1.6rem;
-  display: flex;
-  position: sticky;
+  border: 2px solid red;
+  padding: 13.5em;
+  display: grid;
   justify-content: center;
-  bottom: 0;
-  width: 100%;
-  /* z-index: 1; */
+  align-items: center;
 }
-.Margin {
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
-  border-width: thin;
-  border-color: rgb(98, 97, 97);
-}
-.Save {
-  margin-left: 0.17rem;
-  margin-right: 0.1rem;
-  background: #0176d3;
-  color: aliceblue;
+.TestButton {
+  background: blueviolet;
   border: none;
+  color: wheat;
+  padding: 1rem;
 }
+
 /* ================================================================== */
 /* DevLopMenT End */
 .Layout {
@@ -131,7 +44,7 @@
 }
 .Nav ul {
   margin-top: 28px;
-  margin-left: 10px;
+  margin-left: 4rem;
   list-style-type: none;
   display: flex;
   flex-wrap: nowrap;
@@ -146,6 +59,7 @@
   color: rgb(62, 60, 60);
   /* margin-left: 10px; */
   margin-top: 20px;
+  font-size: 0.9rem;
 }
 .Nav li :hover {
   border-top: 3.5px solid rgb(36, 110, 174);
@@ -242,7 +156,12 @@ p {
   /* padding: 10px; */
 }
 
-/* .navigation {} */
+.navigation {
+  display: inline;
+  position: absolute;
+  left: 2rem;
+  top: 3.8rem;
+}
 .sp1 {
   --i: 0;
   --x: -1;
@@ -311,7 +230,8 @@ p {
   margin: 10px;
   height: 100vh;
   padding: 10px;
-  background-color: rgb(243, 243, 243);
+  /* background-color: rgb(243, 243, 243); */
+  background-color: white;
   border-radius: 5px;
   box-sizing: border-box;
   text-align: center;
@@ -544,3 +464,106 @@ body.active-modal {
 }
 
 /* Modal css End*/
+/* LeadModalContent starT*/
+
+.LeadModalContent {
+  /* border: 2px solid red; */
+  width: 52.4rem;
+  height: 27em;
+  margin: 10px;
+  margin-top: 3rem;
+  margin-left: 219px;
+  background: white;
+  border-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow-y: scroll;
+  position: relative;
+}
+.LeadModalContent::-webkit-scrollbar {
+  width: 1.1rem;
+}
+.LeadModalContent::-webkit-scrollbar-track {
+  background: rgb(241 241 241);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-block: 0.7em;
+}
+.LeadModalContent::-webkit-scrollbar-thumb {
+  height: 1px;
+  background: rgb(193 193 193);
+  border: 2px solid rgb(241 241 241);
+}
+.Inside {
+  margin: 0;
+  /* border: 2px dotted blue; */
+}
+.Head {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.thickLine {
+  height: 0.14rem;
+  background: rgb(193 193 193);
+}
+.ReqInfo {
+  text-align: right;
+  font-size: 0.8em;
+  color: rgb(62, 60, 60);
+  margin: 1rem 1rem 0.5rem;
+}
+.star {
+  color: rgb(186 5 23);
+}
+.ColorBar {
+  background: rgb(243 243 243);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3em;
+  margin: 0.1rem 0.5rem;
+}
+.descMargin {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.TextArea {
+  width: 46rem;
+  height: 4rem;
+  /* margin: 0rem 2rem 2rem 10rem; */
+  margin-top: 0rem;
+  margin-left: 2rem;
+  margin-bottom: 1.3rem;
+}
+.InputSize {
+  width: 20rem;
+  height: 1.9rem;
+  margin-left: 2rem;
+  border-radius: 5px;
+  border-width: thin;
+  padding: 0.7rem;
+}
+.ButtonBar {
+  background: rgb(238 237 236);
+  opacity: 0.9;
+  padding: 1.6rem;
+  display: flex;
+  position: sticky;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  /* z-index: 1; */
+}
+.Margin {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  border-width: thin;
+  border-color: rgb(98, 97, 97);
+}
+.Save {
+  margin-left: 0.17rem;
+  margin-right: 0.1rem;
+  background: #0176d3;
+  color: aliceblue;
+  border: none;
+}
+/* LeadModalContent End */

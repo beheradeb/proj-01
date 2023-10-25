@@ -1,10 +1,8 @@
 import { useState } from "react";
-import EditPen from "../image/edit-pen.png";
 import axios from "../api/axios";
 
-const AccountNew = ({ toggleOpenModal }) => {
+const LeadModalContent = ({ toggleOpenModal }) => {
   const [inputObj, setInputObj] = useState({
-    id: "",
     firstName: "",
     lastName: "",
     phone: "",
@@ -20,10 +18,8 @@ const AccountNew = ({ toggleOpenModal }) => {
     setInputObj({ ...inputObj, [name]: value });
   };
   const handleSave = async () => {
-    const id = Math.random() + 1;
     setInputObj({
       ...inputObj,
-      id: id,
       firstName: "",
       lastName: "",
       phone: "",
@@ -34,9 +30,9 @@ const AccountNew = ({ toggleOpenModal }) => {
       description: "",
     });
     try {
-      const response = await axios.post("/accounts", inputObj);
+      const response = await axios.post("/leads", inputObj);
       const data = await response.data;
-      console.log("Account Response::", JSON.stringify(data));
+      console.log("ddd===bbb::", JSON.stringify(data));
     } catch (err) {
       console.log("Err🔴r :", err.message);
     }
@@ -46,12 +42,12 @@ const AccountNew = ({ toggleOpenModal }) => {
   return (
     <section className="LeadModalContent">
       <div className="Inside">
-        <p className="Head">New Account</p>
+        <p className="Head">New Lead</p>
         <div className="thickLine"></div>
         <p className="ReqInfo">
           <span className="star">*</span> = Required Information
         </p>
-        <div className="ColorBar">Account Information</div>
+        <div className="ColorBar">Lead Information</div>
         <div className="row">
           <div className="column">
             <p className="font1 descMargin">First Name </p>
@@ -157,4 +153,4 @@ const AccountNew = ({ toggleOpenModal }) => {
   );
 };
 
-export default AccountNew;
+export default LeadModalContent;

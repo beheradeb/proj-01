@@ -14,11 +14,11 @@ const AccDetails = () => {
   const [age, setAge] = useState("");
   const [zip, setZip] = useState("");
   const [description, setDescription] = useState("");
-  const { leadId } = useParams();
+  const { accountsId } = useParams();
   useEffect(() => {
     const fetchLead = async () => {
       try {
-        const response = await axios.get(`/leads/${leadId}`);
+        const response = await axios.get(`/accounts/${accountsId}`);
         const lead = await response.data;
         setObj(lead);
         setId(lead.id);
@@ -51,7 +51,7 @@ const AccDetails = () => {
       description,
     };
     try {
-      const response = await axios.put(`leads/${leadId}`, newObj);
+      const response = await axios.put(`leads/${accountsId}`, newObj);
       console.log("Response :", response);
     } catch (err) {
       console.log("Err🔴r: ", err.message);
@@ -66,25 +66,11 @@ const AccDetails = () => {
           <p className="font1">id </p>
           <div className="flex">
             <p className="black">{id}</p>
-            <img
-              src={EditPen}
-              alt="Edit Pen"
-              width="15px"
-              height="15px"
-              className="EditPen"
-            />
           </div>
           <hr />
           <p className="font1">First Name </p>
           <div className="flex">
             <p className="black">{firstName}</p>
-            {/* <img
-              src={EditPen}
-              alt="Edit Pen"
-              width="15px"
-              height="15px"
-              className="EditPen"
-            /> */}
           </div>
           <hr />
           <p className="font1">Last Name </p>

@@ -31,14 +31,11 @@ const AccDesc = () => {
         <img src={Logo} alt="img not aviable" className="DesAccountLogo" />
         <div className="marginFont">
           <p className="font">Account</p>
-          {/* <h1 className="fonth1">Ms Shelly Brownell</h1> */}
           <h1 className="fonth1">{firstName}</h1>
         </div>
         <div className="btn">
-          {/* <button className="follow">+ &nbsp; Follow</button> */}
           <button className="clRight">Edit</button>
-          {/* <button className="clRight edit">Edit</button> */}
-          {/* <button className="edit">New Case</button> */}
+          <button className="clRight edit">Delete</button>
           <button className="setRgt">
             <img
               src={Play}

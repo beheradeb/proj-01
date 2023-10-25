@@ -66,13 +66,13 @@ const Details = () => {
           <p className="font1">id </p>
           <div className="flex">
             <p className="black">{id}</p>
-            <img
+            {/* <img
               src={EditPen}
               alt="Edit Pen"
               width="15px"
               height="15px"
               className="EditPen"
-            />
+            /> */}
           </div>
           <hr />
           <p className="font1">First Name </p>

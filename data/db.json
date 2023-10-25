@@ -1,13 +1,24 @@
 {
   "leads": [
     {
+      "id": "1",
+      "firstName": "Shreya",
+      "lastName": "Singh",
+      "phone": "9846744375",
+      "email": "shreya375@gmail.com",
+      "location": "Noida",
+      "age": "50",
+      "zip": "908049",
+      "description": "This is description"
+    },
+    {
       "id": "3",
       "firstName": "Rahul",
       "lastName": "Nayak",
       "phone": 9876543210,
       "email": "rahul97@gmail.com",
       "location": "Bangalore",
-      "age": "4",
+      "age": "49",
       "zip": "808049",
       "description": "This is description"
     },
@@ -21,30 +32,7 @@
       "age": "39",
       "zip": "768441",
       "description": "This is description"
-    },
-    {
-      "id": "1",
-      "firstName": "Shreya",
-      "lastName": "Singh",
-      "phone": "9846744375",
-      "email": "shreya375@gmail.com",
-      "location": "Noida",
-      "age": "50",
-      "zip": "908049",
-      "description": "This is description"
     }
   ],
-  "accounts": [
-    {
-      "id": "1",
-      "firstName": "Shreya",
-      "lastName": "Singh",
-      "phone": "9846744375",
-      "email": "shreya375@gmail.com",
-      "location": "Noida",
-      "age": "50",
-      "zip": "908049",
-      "description": "This is description"
-    }
-  ]
+  "accounts": []
 }

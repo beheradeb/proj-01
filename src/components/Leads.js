@@ -3,7 +3,7 @@ import axios from "../api/axios";
 import { Link } from "react-router-dom";
 import Logo from "../image/lead_120.png";
 import Play from "../image/Down-Carrot-512.webp";
-import Development from "./Development";
+import LeadModalContent from "./LeadModalContent";
 
 const Leads = () => {
   const [leads, setLeads] = useState([]);
@@ -113,7 +113,7 @@ const Leads = () => {
             <button className="cross-btn" onClick={toggleOpenModal}>
               <strong>&#9587;</strong>
             </button>
-            <Development toggleOpenModal={toggleOpenModal} />
+            <LeadModalContent toggleOpenModal={toggleOpenModal} />
           </div>
         </div>
       )}
