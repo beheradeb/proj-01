@@ -1,36 +1,78 @@
-// import { useRef, useState } from "react";9
-// import ToastMessage from "./ToastMessage";
-// import ToastBar from "./ToastBar";
-// const typeObj = {
-//   success: "success",
-//   fail: "fail",
-// };
-
+import { useState, useEffect } from "react";
+import axios from "../api/axios";
 const Development = () => {
-  // const [show, setShow] = useState(false);
-  // const handleShow = () => {
-  //   setShow(true);
-  //   setTimeout(() => {
-  //     setShow(false);
-  //   }, 2000);
-  // };
-  // const toastBarRef = useRef(null);
+  const [leads, setLeads] = useState([]);
+  useEffect(() => {
+    const fetchLeads = async () => {
+      try {
+        const response = await axios.get("/leads");
+        const leads = await response.data;
+        setLeads(leads);
+      } catch (err) {
+        console.log("Err🔴r: ", err.message);
+      }
+    };
+    fetchLeads();
+  }, []);
   return (
     <section className="Development">
-      {/* <button className="TestButton" onClick={() => handleShow()}>
-        Show Toast Message
-      </button> */}
-      {/* {show && (
-        <ToastBar
-          message="Test Successfully Converted"
-          type={typeObj.success}
-        />
-      )} */}
-      {/* <ToastMessage
-        ref={toastBarRef}
-        message="Successfully Converted"
-        type={typeObj.success}
-      /> */}
+      <div className="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>
+                <input type="checkbox" />
+              </th>
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Age</th>
+              <th>Age1</th>
+              <th>Age2</th>
+              <th>Age3</th>
+              <th>Age4</th>
+              <th>Age5</th>
+              <th>Age6</th>
+              <th>Age7</th>
+            </tr>
+          </thead>
+          <tbody>
+            {leads.map((lead, index) => (
+              <tr key={lead.id}>
+                <td>{index + 1}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    id={lead.id}
+                    name={lead.id}
+                    value={lead.id}
+                  />
+                </td>
+                <td>{lead.id}</td>
+                <td>
+                  {lead.firstName}
+                  {/* <Link to={`/leads/${lead.id}`}>{lead.firstName}</Link> */}
+                </td>
+                <td>{lead.lastName}</td>
+                <td>{lead.email}</td>
+                <td>{lead.email}</td>
+                <td>{lead.email}</td>
+                <td>{lead.email}</td>
+                <td>{lead.email}</td>
+                <td>{lead.email}</td>
+                <td>{lead.email}</td>
+                <td>{lead.email}</td>
+                <td>{lead.phone}</td>
+                <td>{lead.age}</td>
+                {/* <td>{lead.intend}</td> */}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </section>
   );
 };

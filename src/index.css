@@ -8,11 +8,12 @@
 /* DEvelopmeNt starT*/
 /* ================================================================== */
 .Development {
-  border: 2px solid red;
-  padding: 13.5em;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  margin-top: 50px;
+  /* border: 2px solid red; */
+  /* padding: 1em; */
+  /* display: grid; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 .TestButton {
   background: blueviolet;
@@ -20,6 +21,50 @@
   color: wheat;
   padding: 1rem;
 }
+/* table start*/
+.table-box {
+  width: 100%;
+  height: 320px;
+  overflow-y: scroll;
+  background: #fff;
+}
+table {
+  width: 100%;
+}
+table,
+th,
+td {
+  border-top: 1px solid rgb(193, 189, 189);
+  border-collapse: collapse;
+  padding: 7px;
+  text-align: left;
+}
+th {
+  border: 1px solid rgb(193, 189, 189);
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  background-color: rgb(243, 243, 243);
+}
+tr th:nth-child(1) {
+  width: 60px;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+}
+tr th:nth-child(2) {
+  border-left: none;
+}
+tr td:nth-child(1) {
+  text-align: center;
+}
+tr th:last-child {
+  border-right: none;
+}
+tr td:last-child {
+  border-right: none;
+}
+/* table end*/
 
 /* ================================================================== */
 /* DevLopMenT End */
@@ -72,7 +117,7 @@
 .Leads {
   margin: 10px;
   /* height: 89vh; */
-  /* padding: 2px; */
+  height: 79vh;
   background-color: rgb(243, 243, 243);
   border-radius: 5px;
   box-sizing: border-box;
@@ -82,37 +127,33 @@
   align-items: center;
 }
 
-.Leads table {
+/* .Leads table {
   border-top: 1px solid rgb(243, 243, 243);
   margin-top: 30px;
   border-collapse: collapse;
-  /* margin-left: 10px; */
-  /* padding: 1px; */
   table-layout: fixed;
   width: 100%;
-}
-.Leads thead {
+} */
+/* .Leads thead {
   display: block;
-}
-.Leads tbody {
+} */
+/* .Leads tbody {
   display: block;
   height: 320px;
-  /* width: 100%; */
   overflow-y: auto;
   font-size: 14px;
   padding-left: 10px;
-}
-.Leads th {
+} */
+/* .Leads th {
   border: 1px solid rgb(193, 189, 189);
   border-collapse: collapse;
   padding: 5px;
-  /* padding-left: 17px;
-  padding-right: 17px; */
+  padding-left: 8px;
   text-align: left;
   position: sticky;
   min-width: 138px;
-}
-.Leads td {
+} */
+/* .Leads td {
   border-top: 1px solid rgb(193, 189, 189);
   border-bottom: 1px solid rgb(193, 189, 189);
   border-collapse: collapse;
@@ -121,13 +162,7 @@
   height: 5vh;
   min-width: 132px;
   text-align: left;
-}
-
-.Lead {
-}
-.Details {
-  /* margin-top: 0; */
-}
+} */
 
 /* Create two equal columns that floats next to each other */
 .column {
@@ -288,7 +323,19 @@ p {
 .first {
   background: rgb(243, 243, 243);
   padding: 1rem;
+  /* min-height: 8em; */
   min-height: 4.2em;
+  position: relative;
+  /* border-radius: 5px; */
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  display: flex;
+}
+.firstWithExt {
+  background: rgb(243, 243, 243);
+  padding: 1rem;
+  min-height: 8em;
+  /* min-height: 4.2em; */
   position: relative;
   /* border-radius: 5px; */
   border-top-right-radius: 5px;

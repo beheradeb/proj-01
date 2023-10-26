@@ -3,12 +3,8 @@ import Logo from "../image/lead_120.png";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "../api/axios";
-// toast message
-import ToastBar from "./ToastBar";
-const typeObj = {
-  success: "success",
-  fail: "fail",
-};
+import ToastBar from "./ToastBar"; //toast bar
+import EditModal from "./EditModal";
 
 const Description = () => {
   const [open, setOpen] = useState(false);
@@ -16,13 +12,22 @@ const Description = () => {
   const [firstName, setFirstName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [id, setId] = useState("");
   const options = ["New Note", "Delete", "Check for New Data"];
   const { leadId } = useParams();
   const navigate = useNavigate();
   // toastmsg
   const [show, setShow] = useState(false);
+  const [toastMsg, setToastMsg] = useState("Not changed");
+  const [toastMsgType, setToastMsgType] = useState("");
+  //edit btn
+  const [openEditModal, setOpenEditModal] = useState(false);
+  const toggleOpenEditModal = () => {
+    setOpenEditModal(!openEditModal);
+  };
   useEffect(() => {
     const fetchResp = async () => {
+      setId(leadId);
       try {
         const response = await axios.get(`/leads/${leadId}`);
         const lead = await response.data;
@@ -40,6 +45,8 @@ const Description = () => {
   const handleConvert = async () => {
     try {
       await axios.post(`/accounts`, obj);
+      setToastMsg("Successfully Converted");
+      setToastMsgType("success");
       setShow(true);
       await axios.delete(`/leads/${leadId}`);
       setTimeout(() => {
@@ -50,7 +57,23 @@ const Description = () => {
       console.log("Err🔴r: ", err.message);
     }
   };
-  const handleEdit = () => {};
+  const handleEdit = () => {
+    toggleOpenEditModal();
+  };
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/leads/${leadId}`);
+      setToastMsgType("fail");
+      setToastMsg("Successfully Deleted");
+      setShow(true);
+      setTimeout(() => {
+        setShow(false);
+        navigate("/leads");
+      }, 2000);
+    } catch (err) {
+      console.log("Err🔴r In Description of Lead: ", err.message);
+    }
+  };
   return (
     <>
       <div className="Description">
@@ -58,7 +81,6 @@ const Description = () => {
           <img src={Logo} alt="img not aviable" className="DesLeadLogo" />
           <div className="marginFont">
             <p className="font">Lead</p>
-            {/* <h1 className="fonth1">Ms Shelly Brownell</h1> */}
             <h1 className="fonth1">{firstName}</h1>
           </div>
           <div className="btn">
@@ -73,7 +95,7 @@ const Description = () => {
             <button className="clRight" onClick={() => handleEdit()}>
               Edit
             </button>
-            <button className="clRight edit" onClick={() => handleEdit()}>
+            <button className="clRight edit" onClick={() => handleDelete()}>
               Delete
             </button>
             <button className="setRgt">
@@ -121,8 +143,16 @@ const Description = () => {
           </div>
         </div>
       </div>
-      {show && (
-        <ToastBar message="Successfully Converted" type={typeObj.success} />
+      {show && <ToastBar message={toastMsg} type={toastMsgType} />}
+      {openEditModal && (
+        <div className="modal">
+          <div className="overlay">
+            <button className="cross-btn" onClick={toggleOpenEditModal}>
+              <strong>&#9587;</strong>
+            </button>
+            <EditModal toggleOpenModal={toggleOpenEditModal} Id={id} />
+          </div>
+        </div>
       )}
     </>
   );

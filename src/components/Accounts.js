@@ -37,7 +37,7 @@ const Accounts = () => {
       <div className="first">
         <img src={Logo} alt="img not aviable" className="DesAccountLogo" />
         <div className="marginFont">
-          <p className="font">Accounts</p>
+          <p className="font">Person Accounts</p>
           <h1 className="fonth1">Ms Shelly Brownell</h1>
         </div>
         <div className="btn">

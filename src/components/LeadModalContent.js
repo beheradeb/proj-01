@@ -18,17 +18,6 @@ const LeadModalContent = ({ toggleOpenModal }) => {
     setInputObj({ ...inputObj, [name]: value });
   };
   const handleSave = async () => {
-    setInputObj({
-      ...inputObj,
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      location: "",
-      age: "",
-      zip: "",
-      description: "",
-    });
     try {
       const response = await axios.post("/leads", inputObj);
       const data = await response.data;

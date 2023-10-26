@@ -4,7 +4,7 @@ const ToastBar = (props) => {
   return (
     <div
       className="ToastBox"
-      style={{ backgroundColor: props.type === "success" ? "#1f9f1f" : "red" }}
+      style={{ backgroundColor: props.type === "success" ? "#2e844a" : "red" }}
     >
       <div className="message">{props.message}</div>
       <div className="symbol">

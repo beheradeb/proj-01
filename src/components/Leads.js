@@ -34,7 +34,7 @@ const Leads = () => {
   }, []);
   return (
     <div className="Leads">
-      <div className="first">
+      <div className="firstWithExt">
         <img src={Logo} alt="img not aviable" className="DesLeadLogo" />
         <div className="marginFont">
           <p className="font">Leads</p>
@@ -66,7 +66,48 @@ const Leads = () => {
           </div>
         </div>
       </div>
-      <table>
+      <div className="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>
+                <input type="checkbox" />
+              </th>
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            {leads.map((lead, index) => (
+              <tr key={lead.id}>
+                <td>{index + 1}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    id={lead.id}
+                    name={lead.id}
+                    value={lead.id}
+                  />
+                </td>
+                <td>{lead.id}</td>
+                <td>
+                  <Link to={`/leads/${lead.id}`}>{lead.firstName}</Link>
+                </td>
+                <td>{lead.lastName}</td>
+                <td>{lead.email}</td>
+                <td>{lead.phone}</td>
+                <td>{lead.age}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {/* <table>
         <thead>
           <tr>
             <th style={{ borderLeft: "none", borderRight: "none" }}></th>
@@ -78,8 +119,7 @@ const Leads = () => {
             <th>Last Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Age</th>
-            <th style={{ borderRight: "none" }}>Intend</th>
+            <th style={{ borderRight: "none" }}>Age</th>
           </tr>
         </thead>
         <tbody>
@@ -102,11 +142,10 @@ const Leads = () => {
               <td>{lead.email}</td>
               <td>{lead.phone}</td>
               <td>{lead.age}</td>
-              <td>{lead.intend}</td>
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
       {openModal && (
         <div className="modal">
           <div className="overlay">
