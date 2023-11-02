@@ -1,0 +1,31 @@
+.dropdown {
+  margin-top: 2px;
+  border: 1.5px solid rgb(116, 116, 116);
+  border-radius: 4px;
+  width: 30%;
+}
+.btn-dropdown-img {
+  border: none;
+  display: flex;
+}
+.btn-dropdown-img > span {
+  margin-right: 2.3em;
+  color: rgb(82, 81, 81);
+}
+.btn-dropdown-img > .play-img {
+  width: 14px;
+  height: 14px;
+}
+.option-dpdn {
+  margin-top: 0.2em;
+  width: 172px;
+}
+/* 
+.Relative {
+  min-width: 20px;
+  position: absolute;
+  top: 35px;
+  right: inherit;
+  z-index: 1;
+}
+*/

@@ -1,0 +1,10 @@
+.VerifyPatientBenfitDetailsfromLeadModal {
+  width: 80vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 55px;
+  margin-left: 120px;
+  text-align: center;
+  padding: 200px; /*only for test*/
+}

@@ -34,7 +34,7 @@ const Accounts = () => {
   }, []);
   return (
     <div className="Leads">
-      <div className="first">
+      <div className="firstWithExt">
         <img src={Logo} alt="img not aviable" className="DesAccountLogo" />
         <div className="marginFont">
           <p className="font">Person Accounts</p>
@@ -66,47 +66,47 @@ const Accounts = () => {
           </div>
         </div>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th style={{ borderLeft: "none", borderRight: "none" }}></th>
-            <th style={{ borderLeft: "none", paddingLeft: "14px" }}>
-              <input type="checkbox" />
-            </th>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Age</th>
-            <th style={{ borderRight: "none" }}>Intend</th>
-          </tr>
-        </thead>
-        <tbody>
-          {leads.map((lead, index) => (
-            <tr key={lead.id}>
-              <td>{index + 1}</td>
-              <td>
-                <input
-                  type="checkbox"
-                  id={lead.id}
-                  name={lead.id}
-                  value={lead.id}
-                />
-              </td>
-              <td>{lead.id}</td>
-              <td>
-                <Link to={`/accounts/${lead.id}`}>{lead.firstName}</Link>
-              </td>
-              <td>{lead.lastName}</td>
-              <td>{lead.email}</td>
-              <td>{lead.phone}</td>
-              <td>{lead.age}</td>
-              <td>{lead.intend}</td>
+      <div className="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>
+                <input type="checkbox" />
+              </th>
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Age</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {leads.map((lead, index) => (
+              <tr key={lead.id}>
+                <td>{index + 1}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    id={lead.id}
+                    name={lead.id}
+                    value={lead.id}
+                  />
+                </td>
+                <td>{lead.id}</td>
+                <td>
+                  <Link to={`/accounts/${lead.id}`}>{lead.firstName}</Link>
+                </td>
+                <td>{lead.lastName}</td>
+                <td>{lead.email}</td>
+                <td>{lead.phone}</td>
+                <td>{lead.age}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       {openModal && (
         <div className="modal">
           <div className="overlay">

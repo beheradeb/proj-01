@@ -1,0 +1,25 @@
+.PEV {
+  width: 50vw;
+  height: 25vh;
+  background-color: white;
+  padding: 2em;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.flex_btn {
+  color: rgb(78, 77, 77);
+}
+.Drop_Down {
+  margin-top: 1em;
+}
+.cross-btn-pev {
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  margin-left: 1110px;
+  margin-top: 20px;
+  font-size: 15px;
+}

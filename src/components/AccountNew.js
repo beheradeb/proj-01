@@ -1,5 +1,4 @@
 import { useState } from "react";
-import EditPen from "../image/edit-pen.png";
 import axios from "../api/axios";
 
 const AccountNew = ({ toggleOpenModal }) => {
@@ -24,14 +23,6 @@ const AccountNew = ({ toggleOpenModal }) => {
     setInputObj({
       ...inputObj,
       id: id,
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      location: "",
-      age: "",
-      zip: "",
-      description: "",
     });
     try {
       const response = await axios.post("/accounts", inputObj);
@@ -41,7 +32,7 @@ const AccountNew = ({ toggleOpenModal }) => {
       console.log("Err🔴r :", err.message);
     }
     toggleOpenModal();
-    console.log(inputObj);
+    window.location.reload();
   };
   return (
     <section className="LeadModalContent">
