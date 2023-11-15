@@ -1,14 +1,5 @@
-.VerifyPatientBenfitDetailsfromLead {
-  width: 50vw;
-  height: 50vh;
-  background-color: white;
-}
-.vbf-lead {
-  display: flex;
-  justify-content: center;
-  margin: 100px;
-}
 .vbf-lead > button {
+  width: 7.5rem;
   margin: 9px;
   color: rgb(64, 62, 62);
 }

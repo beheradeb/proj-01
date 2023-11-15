@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "../api/axios";
-import EditPen from "../image/edit-pen.png";
 
 const AccDetails = () => {
   const [obj, setObj] = useState({});
@@ -14,11 +13,11 @@ const AccDetails = () => {
   const [age, setAge] = useState("");
   const [zip, setZip] = useState("");
   const [description, setDescription] = useState("");
-  const { accountsId } = useParams();
+  const { recId } = useParams();
   useEffect(() => {
     const fetchLead = async () => {
       try {
-        const response = await axios.get(`/accounts/${accountsId}`);
+        const response = await axios.get(`/accounts/${recId}`);
         const lead = await response.data;
         setObj(lead);
         setId(lead.id);
@@ -51,7 +50,7 @@ const AccDetails = () => {
       description,
     };
     try {
-      const response = await axios.put(`leads/${accountsId}`, newObj);
+      const response = await axios.put(`leads/${recId}`, newObj);
       console.log("Response :", response);
     } catch (err) {
       console.log("Err🔴r: ", err.message);

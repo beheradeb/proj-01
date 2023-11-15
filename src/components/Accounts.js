@@ -1,14 +1,25 @@
 import { useState, useEffect } from "react";
 import axios from "../api/axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Logo from "../image/lead_120.png";
 import Play from "../image/Down-Carrot-512.webp";
 import AccountNew from "./AccountNew";
+// import Table from "./Table";
+import InstanceTable from "./InstanceTable";
 
 const Accounts = () => {
-  const [leads, setLeads] = useState([]);
   const [open, setOpen] = useState(false);
   const options = ["New Note", "Delete", "Check for New Data"];
+  // data for table
+  const [columns, setColumns] = useState([
+    { label: "Id", fieldName: "id" },
+    { label: "First Name", fieldName: "firstName" },
+    { label: "Last Name", fieldName: "lastName" },
+    { label: "Phone", fieldName: "phone" },
+    { label: "Email", fieldName: "email" },
+    { label: "Location", fieldName: "location" },
+  ]);
+  const [data, setData] = useState([]);
   // popup strt
   const [openModal, setOpenModal] = useState(false);
   const toggleOpenModal = () => {
@@ -24,8 +35,8 @@ const Accounts = () => {
     const fetchLeads = async () => {
       try {
         const response = await axios.get("/accounts");
-        const leads = await response.data;
-        setLeads(leads);
+        const objs = await response.data;
+        setData(objs);
       } catch (err) {
         console.log("Err🔴r: ", err.message);
       }
@@ -66,7 +77,9 @@ const Accounts = () => {
           </div>
         </div>
       </div>
-      <div className="table-box">
+      {/* <Table record={leads} redirect={"accounts"} /> */}
+      <InstanceTable columns={columns} data={data} />
+      {/* <div className="table-box">
         <table>
           <thead>
             <tr>
@@ -106,7 +119,7 @@ const Accounts = () => {
             ))}
           </tbody>
         </table>
-      </div>
+      </div> */}
       {openModal && (
         <div className="modal">
           <div className="overlay">

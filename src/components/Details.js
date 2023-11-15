@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "../api/axios";
-import EditPen from "../image/edit-pen.png";
+import VerifyPatientBenfitDetailsfromLead from "./VerifyPatientBenfitDetailsfromLead";
 
 const Details = () => {
   const [obj, setObj] = useState({});
@@ -14,11 +14,11 @@ const Details = () => {
   const [age, setAge] = useState("");
   const [zip, setZip] = useState("");
   const [description, setDescription] = useState("");
-  const { leadId } = useParams();
+  const { recId } = useParams();
   useEffect(() => {
     const fetchLead = async () => {
       try {
-        const response = await axios.get(`/leads/${leadId}`);
+        const response = await axios.get(`/leads/${recId}`);
         const lead = await response.data;
         setObj(lead);
         setId(lead.id);
@@ -51,7 +51,7 @@ const Details = () => {
       description,
     };
     try {
-      const response = await axios.put(`leads/${leadId}`, newObj);
+      const response = await axios.put(`leads/${recId}`, newObj);
       console.log("Response :", response);
     } catch (err) {
       console.log("Err🔴r: ", err.message);
@@ -62,29 +62,18 @@ const Details = () => {
   return (
     <div className="Details">
       <div className="row">
+        <VerifyPatientBenfitDetailsfromLead />
+      </div>
+      <div className="row">
         <div className="column">
           <p className="font1">id </p>
           <div className="flex">
             <p className="black">{id}</p>
-            {/* <img
-              src={EditPen}
-              alt="Edit Pen"
-              width="15px"
-              height="15px"
-              className="EditPen"
-            /> */}
           </div>
           <hr />
           <p className="font1">First Name </p>
           <div className="flex">
             <p className="black">{firstName}</p>
-            {/* <img
-              src={EditPen}
-              alt="Edit Pen"
-              width="15px"
-              height="15px"
-              className="EditPen"
-            /> */}
           </div>
           <hr />
           <p className="font1">Last Name </p>

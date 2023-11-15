@@ -3,20 +3,11 @@ import axios from "../api/axios";
 import Logo from "../image/lead_120.png";
 import Play from "../image/Down-Carrot-512.webp";
 import LeadModalContent from "./LeadModalContent";
-import InstanceTable from "./InstanceTable";
+import Table from "./Table";
+import "./Instances.css";
 
-const Leads = () => {
-  //data for table
-  const [columns, setColumns] = useState([
-    { label: "Id", fieldName: "id" },
-    { label: "First Name", fieldName: "firstName" },
-    { label: "Last Name", fieldName: "lastName" },
-    { label: "Phone", fieldName: "phone" },
-    { label: "Email", fieldName: "email" },
-    { label: "Location", fieldName: "location" },
-  ]);
-  const [data, setData] = useState([]);
-  //data for table end
+const Instances = ({ recordname }) => {
+  const [leads, setLeads] = useState([]);
   const [open, setOpen] = useState(false);
   const options = ["New Note", "Delete", "Check for New Data"];
   // popup strt
@@ -33,21 +24,28 @@ const Leads = () => {
   useEffect(() => {
     const fetchLeads = async () => {
       try {
-        const response = await axios.get("/leads");
+        // const response = await axios.get("/leads");
+        const response = await axios.get(`${recordname}`);
         const objs = await response.data;
-        setData(objs);
+        setLeads(objs);
       } catch (err) {
         console.log("Err🔴r: ", err.message);
       }
     };
     fetchLeads();
-  }, []);
+  }, [recordname]);
   return (
     <div className="Leads">
       <div className="firstWithExt">
-        <img src={Logo} alt="img not aviable" className="DesLeadLogo" />
+        <img
+          src={Logo}
+          alt="img not aviable"
+          className={`Des-${recordname ? recordname : "U"}-Logo`}
+        />
         <div className="marginFont">
-          <p className="font">Leads</p>
+          <p className="font">
+            {recordname[0].toUpperCase() + recordname.slice(1)}
+          </p>
           <h1 className="fonth1">Ms Shelly Brownell</h1>
         </div>
         <div className="btn">
@@ -76,8 +74,7 @@ const Leads = () => {
           </div>
         </div>
       </div>
-      {/* <Table record={leads} redirect="leads" /> */}
-      <InstanceTable columns={columns} data={data} redirect="leads" />
+      <Table record={leads} redirect={recordname} />
       {openModal && (
         <div className="modal">
           <div className="overlay">
@@ -92,4 +89,4 @@ const Leads = () => {
   );
 };
 
-export default Leads;
+export default Instances;

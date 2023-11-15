@@ -6,7 +6,7 @@ import axios from "../api/axios";
 import ToastBar from "./ToastBar"; //toast bar
 import EditModal from "./EditModal";
 
-const Description = () => {
+const InstanceBriefCard = ({ record }) => {
   const [open, setOpen] = useState(false);
   const [obj, setObj] = useState({});
   const [firstName, setFirstName] = useState("");
@@ -80,18 +80,10 @@ const Description = () => {
         <div className="first">
           <img src={Logo} alt="img not aviable" className="DesLeadLogo" />
           <div className="marginFont">
-            <p className="font">Lead</p>
+            <p className="font">{record ? record : "please check"}</p>
             <h1 className="fonth1">{firstName}</h1>
           </div>
           <div className="btn">
-            <button
-              className="follow"
-              onClick={() => {
-                handleConvert();
-              }}
-            >
-              Convert
-            </button>
             <button className="clRight" onClick={() => handleEdit()}>
               Edit
             </button>
@@ -158,4 +150,4 @@ const Description = () => {
   );
 };
 
-export default Description;
+export default InstanceBriefCard;

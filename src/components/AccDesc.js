@@ -11,7 +11,7 @@ const AccDesc = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const options = ["New Note", "Delete", "Check for New Data"];
-  const { accountsId } = useParams();
+  const { recId } = useParams();
   // toastmsg
   const [show, setShow] = useState(false);
   const [toastMsg, setToastMsg] = useState("Not changed");
@@ -20,7 +20,7 @@ const AccDesc = () => {
   useEffect(() => {
     const fetchResp = async () => {
       try {
-        const response = await axios.get(`/accounts/${accountsId}`);
+        const response = await axios.get(`/accounts/${recId}`);
         const lead = await response.data;
         setFirstName(lead.firstName);
         setPhone(lead.phone);
@@ -33,7 +33,7 @@ const AccDesc = () => {
   }, []);
   const handleDelete = async () => {
     try {
-      await axios.delete(`/accounts/${accountsId}`);
+      await axios.delete(`/accounts/${recId}`);
       setToastMsgType("fail");
       setToastMsg("Successfully Deleted");
       setShow(true);

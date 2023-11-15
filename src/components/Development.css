@@ -1,0 +1,13 @@
+.Development {
+  min-height: 468px;
+  border: 2px dashed red;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.TestButton {
+  background: blueviolet;
+  border: none;
+  color: wheat;
+  padding: 1rem;
+}

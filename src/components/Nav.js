@@ -27,11 +27,14 @@ const Nav = () => {
           <Link to="/accounts">Accounts</Link>
         </li>
         <li>
+          <Link to="/products">Products</Link>
+        </li>
+        <li>
+          <Link to="/assets">Assets</Link>
+        </li>
+        <li>
           <Link to="/dev">Dev Area</Link>
         </li>
-        {/* <li>
-          <Link to="/leads/1">Lead</Link>
-        </li> */}
       </ul>
     </nav>
   );
